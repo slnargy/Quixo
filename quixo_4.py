@@ -54,6 +54,8 @@ class Server:
                 direction = changedirection['N']
             elif cube_by in forbidden['S'] :
                 direction = changedirection['S']
+            else :
+                direction = random.choice(directions)
             Move = {"cube": cube_by,"direction": direction}
             while (Move["cube"] in forbidden[Move["direction"]]) :
                         Move = {"cube": cube_by,"direction": direction}
